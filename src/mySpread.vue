@@ -222,14 +222,19 @@ const jSpreadSheetOptions = computed(() => {
         x !== undefined &&
         y !== undefined
       ) {
+
         /**
          * JspreadsheetからVueへの更新中
          */
         updatingFromJspreadsheet.value = true
+
+
         /**
          * 変更されたセルだけ更新
          */
         sheetData.value[y][x] = newValue
+
+
         /**
          * Vueのreactive更新処理が
          * 完了するタイミングを考慮して解除
